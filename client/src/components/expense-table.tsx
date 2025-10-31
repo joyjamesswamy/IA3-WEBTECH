@@ -88,7 +88,7 @@ export function ExpenseTable({ expenses, isLoading, onEdit }: ExpenseTableProps)
       header: "Amount",
       cell: ({ row }: any) => (
         <span className="font-mono font-semibold">
-          ${Number(row.getValue("amount")).toFixed(2)}
+          ₹{Number(row.getValue("amount")).toFixed(2)}
         </span>
       ),
     },

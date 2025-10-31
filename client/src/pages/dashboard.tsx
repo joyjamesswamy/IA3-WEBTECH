@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { TrendingUp, TrendingDown, DollarSign, Receipt, Target } from "lucide-react";
+import { TrendingUp, TrendingDown, IndianRupee, Receipt, Target } from "lucide-react";
 import type { Expense } from "@shared/schema";
 import { MonthlyTrendsChart } from "@/components/charts/monthly-trends-chart";
 import { CategoryPieChart } from "@/components/charts/category-pie-chart";
@@ -58,11 +58,11 @@ export default function Dashboard() {
             <Card>
               <CardHeader className="flex flex-row items-center justify-between gap-2 space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">Total Spent</CardTitle>
-                <DollarSign className="h-4 w-4 text-muted-foreground" />
+                <IndianRupee className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl md:text-3xl font-bold font-mono" data-testid="text-total-spent">
-                  ${stats?.totalSpent.toFixed(2) || "0.00"}
+                  ₹{stats?.totalSpent.toFixed(2) || "0.00"}
                 </div>
                 <p className="text-xs text-muted-foreground mt-1">All time</p>
               </CardContent>
@@ -75,7 +75,7 @@ export default function Dashboard() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl md:text-3xl font-bold font-mono" data-testid="text-monthly-spent">
-                  ${stats?.monthlySpent.toFixed(2) || "0.00"}
+                  ₹{stats?.monthlySpent.toFixed(2) || "0.00"}
                 </div>
                 <p className="text-xs text-muted-foreground mt-1">Current month</p>
               </CardContent>
@@ -101,7 +101,7 @@ export default function Dashboard() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl md:text-3xl font-bold font-mono" data-testid="text-daily-average">
-                  ${stats?.averageDaily.toFixed(2) || "0.00"}
+                  ₹{stats?.averageDaily.toFixed(2) || "0.00"}
                 </div>
                 <p className="text-xs text-muted-foreground mt-1">Per day</p>
               </CardContent>

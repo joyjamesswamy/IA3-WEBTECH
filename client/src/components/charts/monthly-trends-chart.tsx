@@ -52,7 +52,7 @@ export function MonthlyTrendsChart() {
         <YAxis
           className="text-xs"
           tick={{ fill: "hsl(var(--muted-foreground))" }}
-          tickFormatter={(value) => `$${value}`}
+          tickFormatter={(value) => `₹${value}`}
         />
         <Tooltip
           contentStyle={{
@@ -60,7 +60,7 @@ export function MonthlyTrendsChart() {
             border: "1px solid hsl(var(--border))",
             borderRadius: "0.375rem",
           }}
-          formatter={(value: number) => [`$${value.toFixed(2)}`, "Amount"]}
+          formatter={(value: number) => [`₹${value.toFixed(2)}`, "Amount"]}
         />
         <Bar dataKey="amount" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
       </BarChart>

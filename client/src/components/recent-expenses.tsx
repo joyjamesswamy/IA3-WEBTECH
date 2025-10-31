@@ -62,7 +62,7 @@ export function RecentExpenses({ expenses, isLoading }: RecentExpensesProps) {
             </p>
           </div>
           <div className="font-mono font-semibold text-lg ml-4">
-            ${expense.amount.toFixed(2)}
+            ₹{expense.amount.toFixed(2)}
           </div>
         </div>
       ))}

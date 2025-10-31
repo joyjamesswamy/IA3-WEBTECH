@@ -98,7 +98,7 @@ export function BudgetList({ budgets, isLoading, onEdit }: BudgetListProps) {
                   </Badge>
                 </div>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Budget: <span className="font-mono font-semibold">${budget.amount.toFixed(2)}</span>
+                  Budget: <span className="font-mono font-semibold">₹{budget.amount.toFixed(2)}</span>
                 </p>
               </div>
               <div className="flex items-center gap-2">
@@ -125,7 +125,7 @@ export function BudgetList({ budgets, isLoading, onEdit }: BudgetListProps) {
             <div className="space-y-2">
               <div className="flex items-center justify-between text-sm">
                 <span className="font-mono font-semibold" data-testid={`text-spent-${budget.id}`}>
-                  ${spent.toFixed(2)} spent
+                  ₹{spent.toFixed(2)} spent
                 </span>
                 <span className={isOverBudget ? "text-destructive font-semibold" : "text-muted-foreground"}>
                   {percentage.toFixed(0)}%
@@ -137,8 +137,8 @@ export function BudgetList({ budgets, isLoading, onEdit }: BudgetListProps) {
               />
               <p className="text-xs text-muted-foreground">
                 {isOverBudget
-                  ? `$${(spent - budget.amount).toFixed(2)} over budget`
-                  : `$${(budget.amount - spent).toFixed(2)} remaining`}
+                  ? `₹${(spent - budget.amount).toFixed(2)} over budget`
+                  : `₹${(budget.amount - spent).toFixed(2)} remaining`}
               </p>
             </div>
           </div>

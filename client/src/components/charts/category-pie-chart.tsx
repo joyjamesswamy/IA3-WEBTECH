@@ -61,7 +61,7 @@ export function CategoryPieChart() {
             border: "1px solid hsl(var(--border))",
             borderRadius: "0.375rem",
           }}
-          formatter={(value: number) => `$${value.toFixed(2)}`}
+          formatter={(value: number) => `₹${value.toFixed(2)}`}
         />
         <Legend
           wrapperStyle={{

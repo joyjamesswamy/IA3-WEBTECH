@@ -58,7 +58,7 @@ export function BudgetComparisonChart() {
         <YAxis
           className="text-xs"
           tick={{ fill: "hsl(var(--muted-foreground))" }}
-          tickFormatter={(value) => `$${value}`}
+          tickFormatter={(value) => `₹${value}`}
         />
         <Tooltip
           contentStyle={{
@@ -66,7 +66,7 @@ export function BudgetComparisonChart() {
             border: "1px solid hsl(var(--border))",
             borderRadius: "0.375rem",
           }}
-          formatter={(value: number) => `$${value.toFixed(2)}`}
+          formatter={(value: number) => `₹${value.toFixed(2)}`}
         />
         <Legend />
         <Bar dataKey="budget" fill="hsl(var(--chart-2))" radius={[4, 4, 0, 0]} />

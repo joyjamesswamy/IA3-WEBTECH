@@ -33,7 +33,7 @@ export default function Analytics() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold font-mono">
-              ${analytics?.averageExpense.toFixed(2) || "0.00"}
+              ₹{analytics?.averageExpense.toFixed(2) || "0.00"}
             </div>
             <p className="text-xs text-muted-foreground mt-1">Per transaction</p>
           </CardContent>
@@ -59,7 +59,7 @@ export default function Analytics() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold font-mono">
-              ${analytics?.totalSpent.toFixed(2) || "0.00"}
+              ₹{analytics?.totalSpent.toFixed(2) || "0.00"}
             </div>
             <p className="text-xs text-muted-foreground mt-1">All time</p>
           </CardContent>
