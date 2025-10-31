@@ -10,6 +10,6 @@ services:
       - key: NODE_ENV
         value: production
       - key: MONGODB_URI
-        sync: false
+        value: mongodb+srv://joyjames_db_user:luqhq1z77rhXMIAU@cluster0.my6yhev.mongodb.net/wealthwatch?retryWrites=true&w=majority&appName=Cluster0
       - key: PORT
         value: 10000
